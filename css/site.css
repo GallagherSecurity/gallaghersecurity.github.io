@@ -1,0 +1,24 @@
+* {
+    font-family:Calibri-Regular, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+header {
+    background: #ff8400 !important;
+    height: 84px !important;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2) !important;
+    width: 100%;
+}
+#logo-img {
+    padding: 15px;
+}
+h1 {
+    font-size:2em;
+    font-weight:500;
+}
+h2 {
+    font-size:1.6em;
+    font-weight:500;
+}
+h3 {
+    font-size:1.3em;
+    font-weight:500;
+}
