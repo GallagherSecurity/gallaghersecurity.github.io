@@ -6,8 +6,17 @@ header {
     height: 84px !important;
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2) !important;
     width: 100%;
+    overflow: hidden;
 }
-#logo-img {
+header h1 {
+    float: right; 
+    height: 100%; 
+    vertical-align: middle;
+    padding-right: 15px;
+    text-shadow: 0 2px 10px rgba(211, 211, 211, 0.5);
+}
+header img {
+    float: left;
     padding: 15px;
 }
 h1 {
