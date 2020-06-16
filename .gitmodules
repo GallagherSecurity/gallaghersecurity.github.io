@@ -1,0 +1,3 @@
+[submodule "cc-rest-docs"]
+	path = cc-rest-docs
+	url = https://github.com/GallagherSecurity/cc-rest-docs.git
