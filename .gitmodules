@@ -1,6 +1,8 @@
 [submodule "cc-rest-docs"]
 	path = cc-rest-docs
 	url = https://github.com/GallagherSecurity/cc-rest-docs.git
+# doing this means we can commit back from the submodule's directory
+	update = rebase
 [submodule "mobileconnectsdk-docs"]
 	path = mobileconnectsdk-docs
 	url = https://github.com/GallagherSecurity/mobileconnectsdk-docs.git
