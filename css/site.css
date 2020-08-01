@@ -31,6 +31,10 @@ h3 {
   font-size: 1.3em;
   font-weight: 500;
 }
+code {
+  font-family: monospace;
+  background-color: rgba(230, 230, 230, 0.5);
+}
 
 /* some styles copied from gallagher.com */
 

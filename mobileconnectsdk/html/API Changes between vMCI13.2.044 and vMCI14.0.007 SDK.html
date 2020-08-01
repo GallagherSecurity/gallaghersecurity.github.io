@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link rel="stylesheet" href="../../css/site.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/androidstudio.css">
+  </head>
+  <body>
+    <header>
+      <h1>Gallagher Mobile Connect SDK</h1>  
+      <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+    </header>
+<h1>Notable API Changes between vMCI13.2.044 and vMCI14.0.007 SDK for iOS</h1>
+<h2>Major: <code>protocol MobileAccess</code>:</h2>
+<p>The <code>stopScanning()</code> and <code>startScanning()</code> methods have been replaced with a single <code>setScanning(enabled: Bool)</code> method</p>
+<p>The <code>readerUpdateDelegate</code> property has been replaced with a pair of methods:<br>
+<code>addReaderUpdateDelegate(delegate)</code> and <code>removeReaderUpdateDelegate(delegate)</code> to allow for multiple concurrent delegates.</p>
+<p>The <code>enableAutomaticAccess()</code> and <code>disableAutomaticAccess()</code> methods have been replaced with a single <code>var isAutomaticAccessEnabled: Bool</code> property. This also now lets you read the value, rather than only write it.</p>
+<h2>Major: <code>protocol AccessDelegate</code>:</h2>
+<p>The <code>onAccessStart</code> method has been renamed to <code>onAccessStarted</code></p>
+<h2>Major: <code>enum MobileAccessState</code>:</h2>
+<p>This enum has been synchronized with the Android SDK.</p>
+<p>The <code>bleErrorUnsupported</code> value has been replaced with <code>errorNoBleFeature</code>.</p>
+<p>The <code>bleErrorPoweredOff</code> value has been replaced with <code>bleErrorDisabled</code>.</p>
+<p>The <code>extendedBackgroundScanningRequiresLocationServices</code> has been split into two states:  <code>bleWarningExtendedBackgroundScanningRequiresLocationServiceEnabled</code> and <code>bleWarningExtendedBackgroundScanningRequiresLocationAlwaysPermission</code></p>
+<h2>Minor: <code>protocol MobileCredential</code>:</h2>
+<p>A new <code>status</code> property has been added, of type <code>MobileCredentialStatus</code>.</p>
+<p>Mobile credentials can be linked to your Passcode/TouchID/FaceID.
+If you remove/reset these in the iOS system settings app, then it can cause your credential to break. This new <code>status</code> property lets you query credential status, and if any problems are detected you may use this information to alert the user about possibly needing to re-register their credential</p>
+<h2>Minor: <code>struct MobileCredentialStatus</code>:</h2>
+<p>This has two properties: <code>singleFactor</code>, <code>secondFactor</code>, both of type <code>enum MobileCredentialKeyStatus</code>, with the following possible values:</p>
+<ul>
+<li><code>good</code>: The SDK believes the factor to be in working order</li>
+<li><code>notRegistered</code>: The factor may have never been registered (secondFactor is optional)</li>
+<li><code>unknown</code>: The SDK cannot determine whether the factor is working or not</li>
+<li><code>bad(Error)</code>: The SDK believes the factor is broken. Additional information may be available in the associated Error object</li>
+</ul>
+<h2>Minor: <code>protocol ReaderAction</code>:</h2>
+<p>This has been converted to a <code>struct</code> which implements the <code>Codable</code> protocol.
+Previously this was represented by an opaque internal type which couldn't be saved/restored (i.e. when marshalling across to JavaScript). It now supports these scenarios</p>
+<h2>Minor: <code>enum ReaderActionType</code>:</h2>
+<p>The existing values of <code>Arm, Disarm, Mode1,...</code> have been renamed to use lowercase. E.g. <code>arm, disarm, mode1,...</code> to fit with swift's coding conventions.</p>
+<p>Two new values have been added: <code>requestAccess</code>: and <code>enumerate</code></p>
+<h2>Minor: <code>class AccessResult</code>:</h2>
+<p>This is now a <code>struct</code></p>
+<p>A new <code>accessMode</code> property has been added, which is of the type <code>enum AccessMode</code>.</p>
+<p>This new mode is in support of the Command Centre 8.30 feature wherein the Gallagher Command Centre Mobile App can now read Mobile Credentials directly (phone-to-phone). There are multiple scenarios which the app supports, and the <code>AccessMode</code> enum conveys which mode was used. It has the following values:</p>
+<ul>
+<li><code>access</code> - Indicates the Command Centre Mobile App is performing access decisions</li>
+<li><code>challenge</code> - Indicates the Command Centre Mobile App is performing spot-check</li>
+<li><code>evac</code> - Indicates the Command Centre Mobile App is performing evacuation</li>
+<li><code>search</code> - Indicates the Command Centre Mobile App is simply looking up cardholder details</li>
+</ul>
+    </body>
+</html>
