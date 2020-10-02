@@ -1,5 +1,5 @@
-# Notable API Changes between vMCIA4.0.010 and vMCIA4.0.015 SDK for Android
-This document represents an overall listing of changes to the SDK. For more details for any particular class or method, please refer to the JavaDocs.
+# Notable API Changes between SDK 14.0.010 and 15.0.016 for Android
+This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.
 
 ## Changed `interface MobileAccess`:
 
