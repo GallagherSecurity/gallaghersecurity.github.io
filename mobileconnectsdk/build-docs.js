@@ -54,7 +54,9 @@ function processFile(infile, outfile) {
 var files = {
     'releases.md': 'html/releases.html',
     'API Changes between vMCA13.2.024 and vMCA14.0.002 SDK.md': 'html/API Changes between vMCA13.2.024 and vMCA14.0.002 SDK.html',
-    'API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.md': 'html/API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.html'
+    'API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.md': 'html/API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.html',
+    'Mobile Connect SDK 15 Release Notes.md': 'html/Mobile Connect SDK 15 Release Notes.html',
+    'API Changes between vMCA14.0.010 and vMCA15.0.016 SDK.md': 'html/API Changes between vMCA14.0.010 and vMCA15.0.016 SDK.html',
 };
 if (!fs.existsSync('html')){
     fs.mkdirSync('html');
