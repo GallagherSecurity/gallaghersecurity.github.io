@@ -1,11 +1,18 @@
-# Notable API Changes between SDK 14.0.010 and 15.0.016 for Android
+# Notable API Changes between SDK 14.0.010 and 15.1.007 for Android
 This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.
 
 ## Changed `interface MobileAccess`:
 
-### Changed: `deleteMobileCredential(...)`
+### Changed: `deleteMobileCredential(MobileCredential, DeleteOption, CredentialDeleteListener)`
 In earlier versions of the SDK, this method had two parameters: 
-`deleteMobileCredential(MobileCredential mobileCredential, CredentialDeleteListener listener)`.
+`deleteMobileCredential(MobileCredential, CredentialDeleteListener)`.
+
+The new `DeleteOption` parameter has been added which allows you to control side effects that may occur when you delete the credential; It is explained later in this document
+
+### Added: `getMobileCredentials(MobileCredentialFilter)`
+The existing `getMobileCredentials()` has not changed, and still returns all credentials. This new overload allows you to pass in filter criteria, so you can optionally choose to only get active (non-revoked) credentials.
+
+The `MobileCredentialFilter` enumeration is explained later in this document.
 
 ### Added: `syncCredentialItemUpdates()`
 If you are using either of the new SDK optional features (Digital ID or Salto), these features require a sync with the Gallagher Cloud in order to retrieve data they need.
@@ -42,15 +49,6 @@ Removes a callback added with `addSdkFeatureStateListener`
 
 ### Added: `getSdkFeatureStates()`
 Synchronously returns the state of the SDK optional features. It is better to add a listener such that you can be informed of changes over time, but if you need to get the current states at a point-in-time, then this method allows for that.
-
-It now has three, and has the signature:
-
-`deleteMobileCredential(MobileCredential mobileCredential, DeleteOption deleteOption, CredentialDeleteListener listener)`
-
-The new parameter `DeleteOption` controls the behaviour of the SDK regarding cloud connections while deleting credentials.
-
-### Added: `getMobileCredentials(MobileCredentialFilter)`
-The existing `getMobileCredentials()` has not changed, and still returns all credentials. This new overload allows you to pass in filter criteria, so you can optionally choose to only get active (non-revoked) credentials.
 
 ## Changed `interface MobileAccessProvider`:
 

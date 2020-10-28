@@ -10,12 +10,16 @@
       <h1>Gallagher Mobile Connect SDK</h1>  
       <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
     </header>
-<h1>Notable API Changes between vMCIA4.0.010 and vMCIA4.0.015 SDK for Android</h1>
-<p>This document represents an overall listing of changes to the SDK. For more details for any particular class or method, please refer to the JavaDocs.</p>
+<h1>Notable API Changes between SDK 14.0.010 and 15.1.007 for Android</h1>
+<p>This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.</p>
 <h2>Changed <code>interface MobileAccess</code>:</h2>
-<h3>Changed: <code>deleteMobileCredential(...)</code></h3>
+<h3>Changed: <code>deleteMobileCredential(MobileCredential, DeleteOption, CredentialDeleteListener)</code></h3>
 <p>In earlier versions of the SDK, this method had two parameters:
-<code>deleteMobileCredential(MobileCredential mobileCredential, CredentialDeleteListener listener)</code>.</p>
+<code>deleteMobileCredential(MobileCredential, CredentialDeleteListener)</code>.</p>
+<p>The new <code>DeleteOption</code> parameter has been added which allows you to control side effects that may occur when you delete the credential; It is explained later in this document</p>
+<h3>Added: <code>getMobileCredentials(MobileCredentialFilter)</code></h3>
+<p>The existing <code>getMobileCredentials()</code> has not changed, and still returns all credentials. This new overload allows you to pass in filter criteria, so you can optionally choose to only get active (non-revoked) credentials.</p>
+<p>The <code>MobileCredentialFilter</code> enumeration is explained later in this document.</p>
 <h3>Added: <code>syncCredentialItemUpdates()</code></h3>
 <p>If you are using either of the new SDK optional features (Digital ID or Salto), these features require a sync with the Gallagher Cloud in order to retrieve data they need.</p>
 <p>To perform this sync, you must call <code>syncCredentialItemUpdates</code> in an appropriate place. The Gallagher Mobile Connect application does this whenever it comes from the background into the foreground; we recommend you do similar.</p>
@@ -39,11 +43,6 @@
 <p>Removes a callback added with <code>addSdkFeatureStateListener</code></p>
 <h3>Added: <code>getSdkFeatureStates()</code></h3>
 <p>Synchronously returns the state of the SDK optional features. It is better to add a listener such that you can be informed of changes over time, but if you need to get the current states at a point-in-time, then this method allows for that.</p>
-<p>It now has three, and has the signature:</p>
-<p><code>deleteMobileCredential(MobileCredential mobileCredential, DeleteOption deleteOption, CredentialDeleteListener listener)</code></p>
-<p>The new parameter <code>DeleteOption</code> controls the behaviour of the SDK regarding cloud connections while deleting credentials.</p>
-<h3>Added: <code>getMobileCredentials(MobileCredentialFilter)</code></h3>
-<p>The existing <code>getMobileCredentials()</code> has not changed, and still returns all credentials. This new overload allows you to pass in filter criteria, so you can optionally choose to only get active (non-revoked) credentials.</p>
 <h2>Changed <code>interface MobileAccessProvider</code>:</h2>
 <h3> Added: <code>configure(
     application, 
