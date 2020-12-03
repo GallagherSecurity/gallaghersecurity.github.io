@@ -7,106 +7,118 @@
     <header>
       <h1>Mobile Connect SDK Developer Documentation</h1>  
       <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+      <style type="text/css">
+        #content {
+          padding: 1em;
+        } 
+        #sections3 td {
+          width: 33%;
+          padding-right: 1.3em;
+          vertical-align: top;
+        }
+      </style>
     </header>
 
-    <p>
-      <b>Current release:</b> iOS SDK 14.0.007, Android SDK 14.0.010 <br />
-      For more information refer to <a href="mobileconnectsdk/html/releases.html">Mobile Connect SDK Releases</a>.
-    </p>
+    <div id="content">
 
-    <h2>Overview</h2>
+      <p>
+        <b>Current release:</b> iOS SDK 14.0.007, Android SDK 14.0.010 <br />
+        For more information refer to <a href="mobileconnectsdk/html/releases.html">Mobile Connect SDK Releases</a>.
+      </p>
 
-    <p>
-      If you are not familiar with Gallagher's Mobile Connect application, or how it and the mobile credential registration process work, you should familiarize yourself before going further with the SDK. <br />
-      A good place to start is with the Cloud and App Security Technical Information Paper.
-    </p>
-    <p>
-      <a href="https://gallaghersecurity.github.io/r/mobileconnect-cloud-and-app-security">Mobile Connect Cloud and App Security</a>
-    </p>
+      <h2>Overview</h2>
+      <p>
+        If you are not familiar with Gallagher's Mobile Connect application, or how it and the mobile credential registration process work, you should familiarize yourself before going further with the SDK. 
+        A good place to start is with the Cloud and App Security Technical Information Paper.
+      </p>
+      <p>
+        <a href="https://gallaghersecurity.github.io/r/mobileconnect-cloud-and-app-security">Mobile Connect Cloud and App Security</a>
+      </p>
 
-    <p>
-      Once you are familiar with Mobile Connect and the Credential Registration process, we recommend that you start with the Integration Guide. <br />
-      It is designed to give a big picture view covering server-side integration as well as the mobile apps, and offers architectural guidance.
-    </p>
+      <p>
+        Once you are familiar with Mobile Connect and the Credential Registration process, we recommend that you start with the Integration Guide. <br />
+        It is designed to give a big picture view covering server-side integration as well as the mobile apps, and offers architectural guidance.
+      </p>
 
-    <p>
-      <a href="https://gallaghersecurity.github.io/r/mobileconnectsdk-integration-guide">Mobile Connect SDK Integration Guide</a>
-    </p>
+      <p>
+        <a href="https://gallaghersecurity.github.io/r/mobileconnectsdk-integration-guide">Mobile Connect SDK Integration Guide</a>
+      </p>
 
-    <h2>How to get the SDK software</h2>
+      <hr noshade="noshade" />
 
-    <p>
-      Please contact our Security Interfaces inbox at <a href="mailto:interfaces@security.gallagher.com">interfaces@security.gallagher.com</a> <br />
-      You will be asked to fill out our Interfaces Developer Application form. <br />
-      We need this information to ensure we can provide you with the right software, and so we can add your details to our distribution list to notify you about future updates and security fixes.
-    </p>
+      <table id="sections3">
+        <tr>
+          <td width="33%">
+            <h2>Server</h2>
+            <p>
+              In order to issue Mobile Credentials to your application using the SDK, you must use the Command Centre REST api.
+            </p>
+            <p>
+              <a href="mobileconnectsdk-docs/docs/server/Mobile%20Connect%20SDK%20-%20Getting%20started%20with%20the%20Command%20Centre%20REST%20API.pdf">Getting started with the Command Centre REST API</a>
+            </p>
+            <p>
+              <a href="mobileconnectsdk-docs/docs/server/Mobile%20Connect%20SDK%20-%20Running%20the%20REST%20API%20sample%20integrations.pdf">Running the REST API sample integrations</a>
+            </p>
+            <p>The full REST API documentation is available for reference, or for more advanced needs</p>
+            <p>
+              <a href="cc-rest-docs/ref/index.html">Command Centre REST API Documentation</a>
+            </p>
+            <h3>Sample Code</h3>
+            <p>
+              <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/server/nodejs">NodeJS Sample Integration</a>
+            </p>
+            <p>
+              <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/server/aspnet">ASP.NET Core Sample Integration</a>
+            </p>
+          </td>
+          <td width="33%">
+            <h2>Android</h2>
+            <p>Start with the Developer Guide</p>
+            <p>
+              <a href="mobileconnectsdk-docs/docs/android/developer-guide.html">Android Developer Guide</a>
+            </p>
+            <p>The JavaDoc API reference contains details of all public functionality in the SDK</p>
+            <p>
+              <a href="mobileconnectsdk-docs/docs/android/javadoc/index.html">JavaDoc API reference</a>
+            </p>
+            <h3>Sample Code</h3>
+            <p>
+              <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/android/mobileconnectsdksample">Android MobileConnectSdkSample on Github</a>
+            </p>
+          </td>
+          <td width="33%">
+            <h2>iOS</h2>
+            <p>Start with the Developer Guide</p>
+            <p>
+              <a href="mobileconnectsdk-docs/docs/ios/sdk-docs/developer-guide.html">iOS Developer Guide</a>
+            </p>
+            <p>The API reference contains details of all public functionality in the SDK</p>
+            <p>
+              <a href="mobileconnectsdk-docs/docs/ios/sdk-docs/index.html">API reference</a>
+            </p>
+            <h3>Sample Code</h3>
+            <p>
+              <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/ios/mobileconnectsdksample">iOS MobileConnectSdkSample on Github</a>
+            </p>
+          </td>
+        </tr>
+      </table>
 
-    <hr noshade="noshade" />
+      <hr noshade="noshade" />
 
-    <h2>Command Centre integration</h2>
-    <p>
-      In order to issue Mobile Credentials to your application using the SDK, you must use the Command Centre REST api.
-    </p>
-    <p>The "Getting Started with the Command Centre REST API" and "Running the REST API sample integrations" documents will guide you through getting this up and running.</p>
-    <p>
-      <a href="mobileconnectsdk-docs/docs/server/Mobile%20Connect%20SDK%20-%20Getting%20started%20with%20the%20Command%20Centre%20REST%20API.pdf">Mobile Connect SDK - Getting started with the Command Centre REST API</a>
-    </p>
-    <p>
-      <a href="mobileconnectsdk-docs/docs/server/Mobile%20Connect%20SDK%20-%20Running%20the%20REST%20API%20sample%20integrations.pdf">Mobile Connect SDK - Running the REST API sample integrations</a>
-    </p>
-    <p>For reference, or to move beyond the basic needs of integrating mobile credentials, please refer to the full REST API documentation</p>
-    <p>
-      <a href="cc-rest-docs/ref/index.html">Command Centre REST API Documentation</a>
-    </p>
-    <h3>Sample Code</h3>
-    <p>We provide a server-side sample integration which uses the REST api to create cardholders and issue Mobile Credentials for them.
-      The sample integration is available for NodeJS and ASP.NET Core.
-    </p>
-    <p>
-      <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/server/nodejs">NodeJS Sample Integration</a>
-    </p>
-    <p>
-      <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/server/aspnet">ASP.NET Core Sample Integration</a>
-    </p>
+      <h2>How to get the SDK software</h2>
 
-    <hr noshade="noshade" />
+      <p>
+        Please contact our Security Interfaces inbox at <a href="mailto:interfaces@security.gallagher.com">interfaces@security.gallagher.com</a> <br />
+        You will be asked to fill out our Interfaces Developer Application form. <br />
+        We need this information to ensure we can provide you with the right software, and so we can add your details to our distribution list to notify you about future updates and security fixes.
+      </p>
 
-    <h2>Mobile Connect SDK for Android</h2>
-    <p>The Developer Guide is designed to act as a getting started/walkthrough; The JavaDoc API reference contains details of all public functionality in the SDK</p>
-    <p>
-      <a href="mobileconnectsdk-docs/docs/android/developer-guide.html">Android Developer Guide</a>
-    </p>
-    <p>
-      <a href="mobileconnectsdk-docs/docs/android/javadoc/index.html">JavaDoc API reference</a>
-    </p>
-    <h3>Sample Code</h3>
-    <p>The Android Mobile Connect SDK Sample application demonstrates how you might use the SDK in your application</p>
-    <p>
-      <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/android/mobileconnectsdksample">Android MobileConnectSdkSample on Github</a>
-    </p>
-
-    <hr noshade="noshade" />
-
-    <h2>Mobile Connect SDK for iOS</h2>
-    <p>The Developer Guide is designed to act as a getting started/walkthrough; The API reference contains details of all public functionality in the SDK</p>
-    <p>
-      <a href="mobileconnectsdk-docs/docs/ios/sdk-docs/developer-guide.html">iOS Developer Guide</a>
-    </p>
-    <p>
-      <a href="mobileconnectsdk-docs/docs/ios/sdk-docs/index.html">API reference</a>
-    </p>
-    <h3>Sample Code</h3>
-    <p>The iOS Mobile Connect SDK Sample application demonstrates how you might use the SDK in your application</p>
-    <p>
-      <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs/tree/master/samples/ios/mobileconnectsdksample">iOS MobileConnectSdkSample on Github</a>
-    </p>
-
-    <hr noshade="noshade" />
-
-    <h2>Reference</h2>
-    <a>
-      All of the above documentation and sample code is available in the <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs">GallagherSecurity/mobileconnectsdk-docs git repository</a>
-    </a>
+      <h2>Reference</h2>
+      <a>
+        All of the above documentation and sample code is available in the <a href="https://github.com/GallagherSecurity/mobileconnectsdk-docs">GallagherSecurity/mobileconnectsdk-docs git repository</a>
+      </a>
+    </div>
 
   </body>
 </html>
