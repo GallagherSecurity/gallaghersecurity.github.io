@@ -1,5 +1,48 @@
-# Notable API Changes between SDK 14.0.010 and 15.1.007 for Android
+# API Changes between Android SDK 14.0.002 and 15.1.032
 This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.
+
+## Changed `class MobileAccessProvider`:
+
+### Changed: `configure(...)`
+
+In earlier versions of the SDK, the configure method had two overloads. A simplified version:
+
+```java
+static MobileAccess configure(
+    Application application, String databaseFilePath, 
+    String unlockNotificationChannelId, 
+    String bleServiceForegroundNotificationChannelId);
+```
+
+And the full version:
+
+```java
+static MobileAccess configure(
+    Application application, 
+    String databaseFilePath, 
+    String unlockNotificationChannelId, 
+    String bleServiceForegroundNotificationChannelId,
+    CloudTlsValidationMode cloudTlsValidationMode, 
+    Map<String, Object> config);
+```
+
+The simplified overload has not changed, but the full version has been altered to:
+
+```java
+static MobileAccess configure(
+    Application application, 
+    String databaseFilePath, 
+    NotificationsConfiguration notificationsConfiguration, 
+    EnumSet<SdkFeature> enabledFeatures,
+    CloudTlsValidationMode cloudTlsValidationMode, 
+    Map<String, Object> config));
+```
+Key differences are
+
+1. The addition of the `EnumSet<SdkFeature> enabledFeatures` parameter which lets you enable Digital ID or Salto support. These are not active by default.
+2. The notification channel parameters have been bundled into the new `NotificationsConfiguration` class, which also lets you specify notification Intents, so you can open your app when a user taps the notification. (Prior versions of the SDK did nothing when a notification was tapped.)
+
+It is recommended to use the full overload; please refer to the JavaDocs and SDK Sample Application for more information.
 
 ## Changed `interface MobileAccess`:
 
@@ -49,20 +92,6 @@ Removes a callback added with `addSdkFeatureStateListener`
 
 ### Added: `getSdkFeatureStates()`
 Synchronously returns the state of the SDK optional features. It is better to add a listener such that you can be informed of changes over time, but if you need to get the current states at a point-in-time, then this method allows for that.
-
-## Changed `interface MobileAccessProvider`:
-
-<h3> Added: <code>configure(
-    application, 
-    String databaseFilePath,
-    String unlockNotificationChannelId,                                   
-    String bleServiceForegroundNotificationChannelId,
-    String notificationsChannelId,
-    EnumSet&lt;SdkFeature&gt; enabledFeatures )</code></h3>
-
-Digital ID and Salto integration are not active by default.
-
-This new overload of the `configure` method adds the new `enabledFeatures` parameter. You must call this, suppling a combination of `SdkFeature.SALTO` and `SdkFeature.DIGITAL_ID` in order to use either of the optional features.
 
 ## Changed `enum MobileAccessState`
 

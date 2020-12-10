@@ -4,18 +4,21 @@ Version 15 of the Mobile Connect SDK adds two major features. Digital ID, and in
 
 ## Digital ID
 
-If your Command Centre server is using version 8.40 or higher of Command Centre, you will be able to configure Digital ID cards and assign them to cardholders.
+If your Command Centre server is running version 8.40 or higher of Command Centre, you will be able to configure Digital ID cards and assign them to cardholders.
 
 The Mobile Connect SDK now allows you to display these Digital ID cards in your own app. The Gallagher Command Centre server, Gallagher Cloud, and Mobile Connect SDK perform the task of distributing the ID card data securely.
 
 Digital ID cards are sent using End to End encryption from the Command Centre server to your app using the Mobile Connect SDK. While they transit through the Gallagher Cloud, this encryption ensures that no other party (including Gallagher) is ever able to access this data.
 
+For more information regarding the End to End encryption used by the SDK, please refer to the [End to End encryption technical information paper](https://gallaghersecurity.github.io/r/mobileconnect-end-to-end-encryption)
+
 ## Salto JustIN Mobile Integration
 
 If your Command Centre server is configured to integrate with Salto BLE locks, you can issue Salto Mobile Credentials to your phone and open these doors.
-This feature was previously only available in Gallagher's Mobile Connect app, and not available to third parties via the SDK. It now is.
+This feature was previously only available in Gallagher's Mobile Connect app - it is now available for external developers via the Mobile Connect SDK.
 
 Salto's JustIN Mobile SDK performs the task of communicating with Salto BLE locks, and opening the door. The Gallagher Command Centre server, Gallagher Cloud, and now Mobile Connect SDK perform the task of creating and distributing salto keys securely.
+Note: To use the Salto integration, you must add the extra salto libraries to your app, as well as the Mobile Connect SDK itself. The iOS and Android developer guides show how to do this.
 
 If your Command Centre server is using version 8.40 or higher of Command Centre, Salto keys are sent using End to End encryption from the Command Centre server to your app using the Mobile Connect SDK. While they transit through the Gallagher Cloud, this ensures that no other party (including Gallagher) is able to access these keys.
 

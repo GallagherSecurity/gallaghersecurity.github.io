@@ -4,7 +4,7 @@
 'use strict';
 
 var fs = require('fs');
-var path = require('path');
+var glob = require('glob');
 var hljs = require('highlight.js'); // https://highlightjs.org/
 var md = require('markdown-it')({ 
     html: true,
@@ -23,6 +23,8 @@ var header = fs.readFileSync('header-template.html');
 var footer = fs.readFileSync('footer-template.html');
 
 function processFile(infile, outfile) {
+    console.log(`${infile} => ${outfile}`);
+
     fs.readFile(infile, 'utf8', function (err, input) {
         var output;
     
@@ -50,20 +52,9 @@ function processFile(infile, outfile) {
         });
     });
 }
-
-var files = {
-    'releases.md': 'html/releases.html',
-    'API Changes between vMCA13.2.024 and vMCA14.0.002 SDK.md': 'html/API Changes between vMCA13.2.024 and vMCA14.0.002 SDK.html',
-    'API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.md': 'html/API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.html',
-    'Mobile Connect SDK 15 Release Notes.md': 'html/Mobile Connect SDK 15 Release Notes.html',
-    'API Changes between vMCA14.0.010 and vMCA15.1.007 SDK.md': 'html/API Changes between vMCA14.0.010 and vMCA15.1.007 SDK.html',
-};
 if (!fs.existsSync('html')){
     fs.mkdirSync('html');
 }
-for (var infile in files) {
-    // check if the property/key is defined in the object itself, not in parent
-    if (files.hasOwnProperty(infile)) {           
-        processFile(infile, files[infile]);
-    }
+for (var infile of glob.sync("*.md")) {
+    processFile(infile, "html/" + infile.replace(/.md$/, '.html')); // preserve filenames but put them all in the html subfolder
 }

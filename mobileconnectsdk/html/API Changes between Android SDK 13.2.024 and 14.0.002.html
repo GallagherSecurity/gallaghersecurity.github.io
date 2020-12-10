@@ -9,8 +9,14 @@
     <header>
       <h1>Gallagher Mobile Connect SDK</h1>  
       <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+      <style type="text/css">
+        #content {
+          padding: 1em;
+        }
+      </style>
     </header>
-<h1>Notable API Changes between vMCA13.2.024 and vMCI14.0.002 SDK for Android</h1>
+    <div id="content">
+<h1>API Changes between Android SDK 13.2.024 and 14.0.002</h1>
 <h2>Major: <code>interface MobileAccess</code>:</h2>
 <p>The <code>stopScanning()</code> and <code>startScanning()</code> methods have been replaced with a single <code>setScanning(boolean enabled)</code> method</p>
 <p>The <code>setReaderUpdateListener(listener)</code> method has been replaced with a pair of methods:<br>
@@ -63,5 +69,6 @@ This enables associated values to be passed alongside different kinds of errors 
  - InvitationNotFound
  - Unexpected { String message }
 </code></pre>
+        </div>
     </body>
 </html>

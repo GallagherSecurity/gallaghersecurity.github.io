@@ -1,6 +1,20 @@
 # Release History
 
+### 10 December 2020: iOS SDK **15.1.019**, Android SDK **15.1.032**
+
+Version 15.1 of the SDK is a major release, and adds support for Digital ID cards, and integrates with SALTO Wireless Bluetooth Locks
+
+<a href="Mobile Connect SDK 15 Release Notes.html">View the full Mobile Connect SDK 15 Release Notes</a>
+
+Version 15 of the SDK also introduces some minor breaking changes. 
+
+<a href="API Changes between iOS SDK 14.0.007 and 15.1.019.html">API Changes between iOS SDK 14.0.007 and 15.1.019</a>  
+<a href="API Changes between Android SDK 14.0.002 and 15.1.032.html">API Changes between Android SDK 14.0.002 and 15.1.032</a>  
+
+----
+
 ### 31 July 2020: Android SDK **14.0.010**
+
 Minor bugfixes to better address background permission changes on Android 10.
 
 ----
@@ -10,9 +24,9 @@ Minor bugfixes to better address background permission changes on Android 10.
 Version 14 of the SDK adds the ability for the Command Centre Mobile app to read Mobile Credentials over Bluetooth (phone-to-phone reader).  
 This feature also requires Command Centre server version 8.30 or higher
 
-Version 14 of the SDK introduces some minor breaking changes.  
-iOS: <a href="API Changes between vMCA13.2.024 and vMCA14.0.002 SDK.html">API Changes between vMCA13.2.024 and vMCA14.0.002 SDK</a>  
-Android: <a href="API Changes between vMCI13.2.044 and vMCI14.0.007 SDK.html">API Changes between vMCI13.2.044 and vMCI14.0.007 SDK</a>  
+Version 14 of the SDK also introduces some minor breaking changes.  
+<a href="API Changes between iOS SDK 13.2.044 and 14.0.007.html">API Changes between iOS SDK 13.2.044 and 14.0.007</a>  
+<a href="API Changes between Android SDK 13.2.024 and 14.0.002.html">API Changes between Android SDK 13.2.024 and 14.0.002</a>  
 
 ----
 

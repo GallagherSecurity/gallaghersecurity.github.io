@@ -9,8 +9,15 @@
     <header>
       <h1>Gallagher Mobile Connect SDK</h1>  
       <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+      <style type="text/css">
+        #content {
+          padding: 1em;
+        }
+      </style>
     </header>
-<h1>Notable API Changes between vMCI13.2.044 and vMCI14.0.007 SDK for iOS</h1>
+    <div id="content">
+<h1>API Changes between iOS SDK 13.2.044 and 14.0.007</h1>
+<p>This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.</p>
 <h2>Major: <code>protocol MobileAccess</code>:</h2>
 <p>The <code>stopScanning()</code> and <code>startScanning()</code> methods have been replaced with a single <code>setScanning(enabled: Bool)</code> method</p>
 <p>The <code>readerUpdateDelegate</code> property has been replaced with a pair of methods:<br>
@@ -51,5 +58,6 @@ Previously this was represented by an opaque internal type which couldn't be sav
 <li><code>evac</code> - Indicates the Command Centre Mobile App is performing evacuation</li>
 <li><code>search</code> - Indicates the Command Centre Mobile App is simply looking up cardholder details</li>
 </ul>
+        </div>
     </body>
 </html>

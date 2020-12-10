@@ -1,4 +1,4 @@
-# Notable API Changes between vMCA13.2.024 and vMCI14.0.002 SDK for Android
+# API Changes between Android SDK 13.2.024 and 14.0.002
 
 ## Major: `interface MobileAccess`:
 

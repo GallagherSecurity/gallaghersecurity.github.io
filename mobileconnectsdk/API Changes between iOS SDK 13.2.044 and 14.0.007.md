@@ -1,4 +1,5 @@
-# Notable API Changes between vMCI13.2.044 and vMCI14.0.007 SDK for iOS
+# API Changes between iOS SDK 13.2.044 and 14.0.007
+This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.
 
 ## Major: `protocol MobileAccess`:
 

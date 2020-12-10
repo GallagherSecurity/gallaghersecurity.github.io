@@ -9,9 +9,47 @@
     <header>
       <h1>Gallagher Mobile Connect SDK</h1>  
       <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+      <style type="text/css">
+        #content {
+          padding: 1em;
+        }
+      </style>
     </header>
-<h1>Notable API Changes between SDK 14.0.010 and 15.1.007 for Android</h1>
+    <div id="content">
+<h1>API Changes between Android SDK 14.0.002 and 15.1.032</h1>
 <p>This document represents an overall listing of changes to the Mobile Connect SDK. For more details for any particular class or method, please refer to the JavaDocs.</p>
+<h2>Changed <code>class MobileAccessProvider</code>:</h2>
+<h3>Changed: <code>configure(...)</code></h3>
+<p>In earlier versions of the SDK, the configure method had two overloads. A simplified version:</p>
+<pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">static</span> MobileAccess <span class="hljs-title">configure</span><span class="hljs-params">(
+    Application application, String databaseFilePath, 
+    String unlockNotificationChannelId, 
+    String bleServiceForegroundNotificationChannelId)</span></span>;
+</code></pre>
+<p>And the full version:</p>
+<pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">static</span> MobileAccess <span class="hljs-title">configure</span><span class="hljs-params">(
+    Application application, 
+    String databaseFilePath, 
+    String unlockNotificationChannelId, 
+    String bleServiceForegroundNotificationChannelId,
+    CloudTlsValidationMode cloudTlsValidationMode, 
+    Map&lt;String, Object&gt; config)</span></span>;
+</code></pre>
+<p>The simplified overload has not changed, but the full version has been altered to:</p>
+<pre><code class="language-java"><span class="hljs-function"><span class="hljs-keyword">static</span> MobileAccess <span class="hljs-title">configure</span><span class="hljs-params">(
+    Application application, 
+    String databaseFilePath, 
+    NotificationsConfiguration notificationsConfiguration, 
+    EnumSet&lt;SdkFeature&gt; enabledFeatures,
+    CloudTlsValidationMode cloudTlsValidationMode, 
+    Map&lt;String, Object&gt; config)</span>)</span>;
+</code></pre>
+<p>Key differences are</p>
+<ol>
+<li>The addition of the <code>EnumSet&lt;SdkFeature&gt; enabledFeatures</code> parameter which lets you enable Digital ID or Salto support. These are not active by default.</li>
+<li>The notification channel parameters have been bundled into the new <code>NotificationsConfiguration</code> class, which also lets you specify notification Intents, so you can open your app when a user taps the notification. (Prior versions of the SDK did nothing when a notification was tapped.)</li>
+</ol>
+<p>It is recommended to use the full overload; please refer to the JavaDocs and SDK Sample Application for more information.</p>
 <h2>Changed <code>interface MobileAccess</code>:</h2>
 <h3>Changed: <code>deleteMobileCredential(MobileCredential, DeleteOption, CredentialDeleteListener)</code></h3>
 <p>In earlier versions of the SDK, this method had two parameters:
@@ -43,16 +81,6 @@
 <p>Removes a callback added with <code>addSdkFeatureStateListener</code></p>
 <h3>Added: <code>getSdkFeatureStates()</code></h3>
 <p>Synchronously returns the state of the SDK optional features. It is better to add a listener such that you can be informed of changes over time, but if you need to get the current states at a point-in-time, then this method allows for that.</p>
-<h2>Changed <code>interface MobileAccessProvider</code>:</h2>
-<h3> Added: <code>configure(
-    application, 
-    String databaseFilePath,
-    String unlockNotificationChannelId,                                   
-    String bleServiceForegroundNotificationChannelId,
-    String notificationsChannelId,
-    EnumSet&lt;SdkFeature&gt; enabledFeatures )</code></h3>
-<p>Digital ID and Salto integration are not active by default.</p>
-<p>This new overload of the <code>configure</code> method adds the new <code>enabledFeatures</code> parameter. You must call this, suppling a combination of <code>SdkFeature.SALTO</code> and <code>SdkFeature.DIGITAL_ID</code> in order to use either of the optional features.</p>
 <h2>Changed <code>enum MobileAccessState</code></h2>
 <h3>Added <code>BLE_ERROR_NO_BACKGROUND_LOCATION_PERMISSION</code>.</h3>
 <p>In Android 10, Google added a new permission called <code>ACCESS_BACKGROUND_LOCATION</code> which is required for any application that wants to use Bluetooth while the app is not visible on screen.</p>
@@ -197,5 +225,6 @@ OFFLINE_ONLY
 <p>This fixes a spelling mistake.</p>
 <h3><code>DENIED_TAILGAITING_VISITORS</code> renamed to <code>DENIED_TAILGATING_VISITORS</code></h3>
 <p>This fixes a spelling mistake.</p>
+        </div>
     </body>
 </html>
