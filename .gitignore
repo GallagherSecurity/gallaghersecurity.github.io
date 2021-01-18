@@ -1,1 +1,4 @@
 node_modules
+# assets is a checkout of the 'assets' branch of git-rest-docs
+assets
+
