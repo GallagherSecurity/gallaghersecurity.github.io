@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="../../css/site.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mobile Connect SDK Support and Release Policy</h1>  
+      <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+      <style type="text/css">
+        #content {
+          padding: 1em;
+        }
+        li {
+          margin-bottom: 0.3em;
+        }
+      </style>
+    </header>
+
+    <div id="content">
+      <p>
+        Revision 1.0 – August 2021
+      </p>
+      <h2>Release Process and Timeline</h2>
+      <p>
+        The Gallagher Mobile Connect SDK library release process is decoupled from the Command Centre server release process.
+      </p>
+      <p>
+        When a new version of the Command Centre server becomes available, we may make available a newer version of the SDK libraries in support of a feature added in that Command Centre server version.<br />
+        For example, in November 2020, Gallagher released version 8.40 of the Command Centre server software, which added the Digital ID feature to the server, and Gallagher’s own Mobile Connect app. In December 2020, we released version 15.1 of the Mobile Connect SDK, which adds the Digital ID feature for other apps to use.
+      </p>
+      <p>
+        This is not always the case; however, if a new Command Centre server version does not add or change any features that affect the Mobile Connect App, or the SDK, then there may be no reason for us to release a new SDK version.
+      </p>
+      <p>
+        We may also release new SDK library versions at any time for other reasons. For example, to fix a bug, or to keep up to date with platform changes from Google and Apple.
+      </p>
+      <p>
+        Historically, we have made around 1-4 public releases of the SDK annually.
+      </p>
+      
+      
+      <h2>Supported Version</h2>
+      <p>
+        Gallagher provide official support only for the latest released version of the SDK libraries.<br />
+        Our policy is not to provide bugfixes or patches against older versions of the SDK.
+      </p>
+      <p>
+        Specifically, this means that if you encounter a problem with the SDK, or make a request for a feature enhancement, and you are not using the supported SDK version, we will require you to upgrade as part of a newer, fixed version.
+      </p>
+
+
+      <h2>Backwards Compatibility and SDK Upgrades</h2>
+      <p>
+        The latest version of the Mobile Connect SDK is compatible with all prior releases of Command Centre server, controller, and reader software. For example, if you are running the latest SDK version from 2021, against an old Command Centre system from 2017, it will still work. When we provide updates to the SDK, it will be supported and compatible for use with older readers.
+      </p>
+      <p>
+        This compatibility is not assured in reverse. <br />
+        When the Command Centre system is upgraded, if your Mobile Connect SDK is not on the latest version, we make a best-effort attempt to keep this compatible, and in most scenarios, it will continue to work correctly. 
+        However, we cannot guarantee that this will always be the case, and if you encounter problems you may need to upgrade to the supported SDK version.
+      </p>
+      <p>
+        When providing updates to the SDK, we endeavor to make these non-breaking changes, but at times we may need to do something that will require you to adjust your source code (for example, renaming a method). Any changes will be outlined as part of our SDK documentation.
+      </p>
+
+
+      <h2>Pre-release versions of the SDK and bug resolution</h2>
+      <p>
+        At times, we may publish pre-release versions of the SDK binaries. This occurs for two main reasons
+      </p>
+      <ol>
+        <li>We may at times ask early adopters to try out a new version, which may include a significant new feature, or internal technical change. Such "early adopter" versions will be clearly marked as such.</li>
+        <li>Verification of a bug fix.</li>
+      </ol>
+      <p>
+        Our bug resolution process is approximately as follows:
+      </p>
+      <ul>
+        <li>You report a bug in the SDK reported to Gallagher</li>
+        <li>Gallagher will attempt to reproduce the bug, and gather more information</li>
+        <li><strong>It is likely at this point that we will request additional information, such as log files, from you, so we can more quickly and accurately determine the cause.</strong></li>
+        <li>Gallagher will determine what potential fixes may exist, and attempt to select the best one.</li>
+        <li>A small number of bugs are not simple fixes but may involve decisions, configuration, or tradeoffs. <strong>We may ask for your opinion regarding such choices, so we can better resolve the issue for you, but please be aware there are often multiple considerations, and we may not be able to select the option that you prefer.</strong></li>
+        <li>Gallagher will fix the software and - if possible – test and verify the fix.</li>
+        <li><strong>At this point we may send you a pre-release version of the SDK which contains the fixed code and ask you to test it as well. This is so we can ensure that the bug is correctly fixed in your environment.</strong></li>
+        <li>After confirmation that the bug is fixed, we will create a stable release and make it available to you.</li>
+        <li>We will publish information about this stable release on our developer documentation site. We may also contact other SDK users via email, if the bug fix is relevant to them.</li>
+      </ul>
+      <p>
+        There is no expectation that you release a version of your app containing a pre-release SDK to the public. Pre-releases exist to help all parties improve the quality and stability of the SDK, and are a stepping-stone towards stable releases being available as soon as is possible.
+      </p>
+    </div>
+  </body>
+</html>
+
