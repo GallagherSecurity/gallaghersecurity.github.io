@@ -19,7 +19,7 @@
 
     <div id="content">
       <p>
-        Revision 1.0 – August 2021
+        Revision 1.0.1 – September 2021
       </p>
       <h2>Release Process and Timeline</h2>
       <p>
@@ -61,6 +61,15 @@
       </p>
       <p>
         When providing updates to the SDK, we endeavor to make these non-breaking changes, but at times we may need to do something that will require you to adjust your source code (for example, renaming a method). Any changes will be outlined as part of our SDK documentation.
+      </p>
+
+      <h2>Downgrades</h2>
+      <p>
+        Downgrading the SDK is not supported. <br />
+        This is because the SDK maintains it's own persistent data (database, preferences, keystore) that may change between versions; older SDK versions will not be aware of changes made by more recent ones.
+      </p>
+      <p>
+        For example, if you have version 13.x installed, upgrade to 15.x, then later decide you wish to go back to 13.x again, this is likely to cause the SDK to crash, or otherwise behave incorrectly.
       </p>
 
 
