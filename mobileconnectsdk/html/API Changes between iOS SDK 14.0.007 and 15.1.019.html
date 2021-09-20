@@ -22,19 +22,19 @@
 <h2>Changed <code>class MobileAccessProvider</code>:</h2>
 <h3>Changed: <code>configure(...)</code></h3>
 <p>In earlier versions of the SDK, the configure method was:</p>
-<pre><code class="language-swift"><span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">configure</span><span class="hljs-params">(
-    databaseFilePath: URL? = <span class="hljs-literal">nil</span>, 
-    localization: MobileAccessLocalization? = <span class="hljs-literal">nil</span>, 
-    cloudTlsValidationMode: CloudTlsValidationMode = .anyValidCertificateRequired
-)</span></span> -&gt; <span class="hljs-type">MobileAccess</span>
+<pre><code class="language-swift"><span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">configure</span>(
+    <span class="hljs-params">databaseFilePath</span>: <span class="hljs-type">URL</span>? <span class="hljs-operator">=</span> <span class="hljs-literal">nil</span>, 
+    <span class="hljs-params">localization</span>: <span class="hljs-type">MobileAccessLocalization</span>? <span class="hljs-operator">=</span> <span class="hljs-literal">nil</span>, 
+    <span class="hljs-params">cloudTlsValidationMode</span>: <span class="hljs-type">CloudTlsValidationMode</span> <span class="hljs-operator">=</span> .anyValidCertificateRequired
+)</span> -&gt; <span class="hljs-type">MobileAccess</span>
 </code></pre>
 <p>The method signature is now:</p>
-<pre><code class="language-swift"><span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">configure</span><span class="hljs-params">(
-    databaseFilePath: URL? = <span class="hljs-literal">nil</span>,
-    localization: MobileAccessLocalization? = <span class="hljs-literal">nil</span>,
-    cloudTlsValidationMode: CloudTlsValidationMode = .anyValidCertificateRequired, 
-    enabledFeatures: [SdkFeature] = []
-)</span></span> -&gt; <span class="hljs-type">GallagherMobileAccess</span>.<span class="hljs-type">MobileAccess</span>
+<pre><code class="language-swift"><span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">configure</span>(
+    <span class="hljs-params">databaseFilePath</span>: <span class="hljs-type">URL</span>? <span class="hljs-operator">=</span> <span class="hljs-literal">nil</span>,
+    <span class="hljs-params">localization</span>: <span class="hljs-type">MobileAccessLocalization</span>? <span class="hljs-operator">=</span> <span class="hljs-literal">nil</span>,
+    <span class="hljs-params">cloudTlsValidationMode</span>: <span class="hljs-type">CloudTlsValidationMode</span> <span class="hljs-operator">=</span> .anyValidCertificateRequired, 
+    <span class="hljs-params">enabledFeatures</span>: [<span class="hljs-type">SdkFeature</span>] <span class="hljs-operator">=</span> []
+)</span> -&gt; <span class="hljs-type">GallagherMobileAccess</span>.<span class="hljs-type">MobileAccess</span>
 </code></pre>
 <p>The key difference is the addition of the <code>enabledFeatures</code> parameter which lets you enable Digital ID or Salto support. These are not active by default.
 Please refer to the API Docs and SDK Sample Application for more information.</p>
@@ -127,13 +127,13 @@ It will inform you when a Salto door has been detected, and then again after the
 <p>This class holds the data associated with a Digital ID. You will be given them via registering a <code>DigitalIdDelegate</code>.</p>
 <p><code>DigitalId</code> has the following properties</p>
 <pre><code class="language-swift"><span class="hljs-comment">// Returns the date and time that the Digital ID will be considered active</span>
-activationTime: <span class="hljs-type">Date?</span> { <span class="hljs-keyword">get</span> }
+activationTime: <span class="hljs-type">Date</span>? { <span class="hljs-keyword">get</span> }
 
 <span class="hljs-comment">// Returns the ID of the mobile credential that the Digital ID is associated with.</span>
-activationTime: <span class="hljs-type">Date?</span> { <span class="hljs-keyword">get</span> }
+activationTime: <span class="hljs-type">Date</span>? { <span class="hljs-keyword">get</span> }
 
 <span class="hljs-comment">// Returns the date and time that the Digital ID will be considered expired</span>
-expiryTime: <span class="hljs-type">Date?</span> { <span class="hljs-keyword">get</span> }
+expiryTime: <span class="hljs-type">Date</span>? { <span class="hljs-keyword">get</span> }
 
 <span class="hljs-comment">// returns a user-friendly, localized representation of the ID Card Status (Expired, Not Yet Activated, etc)</span>
 statusValue { <span class="hljs-keyword">get</span> }
@@ -145,7 +145,7 @@ statusType: <span class="hljs-type">DigitalIdStatusType</span> { <span class="hl
 frontSide: <span class="hljs-type">Data</span> { <span class="hljs-keyword">get</span> }
 
 <span class="hljs-comment">// The binary image data for the rear side of the Digital ID card. Nil if the card is single sided</span>
-rearSide: <span class="hljs-type">Data?</span> { <span class="hljs-keyword">get</span> }
+rearSide: <span class="hljs-type">Data</span>? { <span class="hljs-keyword">get</span> }
 </code></pre>
 <h2>Added: <code>protocol DigitalIdDelegate</code></h2>
 <p>Callback interface which will tell you when Digital IDs are added or removed via the Gallagher Cloud</p>
@@ -195,7 +195,7 @@ rearSide: <span class="hljs-type">Data?</span> { <span class="hljs-keyword">get<
 <h2>Added: <code>enum DeleteOption</code></h2>
 <p>A new enumeration has been added to control the behaviour of the SDK when deleting a mobile credential.</p>
 <pre><code class="language-swift"><span class="hljs-comment">// Deletes from the cloud and phone; Fail if the cloud cannot be contacted.</span>
-.<span class="hljs-keyword">default</span>
+.default
 <span class="hljs-comment">// Deletes from the cloud and phone; Continue with phone delete if the cloud cannot be contacted.</span>
 .allowOffline
 <span class="hljs-comment">// Not recommended. Does not attempt to contact the cloud.</span>

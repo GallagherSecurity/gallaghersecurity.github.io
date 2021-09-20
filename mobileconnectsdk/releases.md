@@ -1,8 +1,25 @@
 # Release History
 
+### September 2021: iOS SDK **15.4.033**, Android SDK **15.4.037**
+
+Version 15.4 of the SDK adds support for Mobile Credential sharing.
+
+Community-supported, Open Source binding libraries for Xamarin and React Native are now available.
+
+The iOS SDK no longer depends on the open source RxSwift framework.
+
+The Android SDK is now aware of Android 12's permission changes.
+
+<a href="Mobile Connect SDK 15.4 Release Notes.html">View the full Mobile Connect SDK 15.4 Release Notes</a>
+
+Version 15.4 should have no source level breaking changes. It does introduce a few new methods and properties.
+
+<a href="API Changes between iOS SDK 15.1.019 and 15.4.033.html">API Changes between iOS SDK 15.1.019 and 15.4.033</a>  
+<a href="API Changes between Android SDK 15.1.032 and 15.4.037.html">API Changes between Android SDK 15.1.032 and 15.4.037</a>  
+
 ### 10 December 2020: iOS SDK **15.1.019**, Android SDK **15.1.032**
 
-Version 15.1 of the SDK is a major release, and adds support for Digital ID cards, and integrates with SALTO Wireless Bluetooth Locks
+Version 15.1 of the SDK adds support for Digital ID cards, and integrates with SALTO Wireless Bluetooth Locks
 
 <a href="Mobile Connect SDK 15 Release Notes.html">View the full Mobile Connect SDK 15 Release Notes</a>
 
