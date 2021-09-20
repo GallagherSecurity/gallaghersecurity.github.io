@@ -1,6 +1,6 @@
 # Release History
 
-### September 2021: iOS SDK **15.4.033**, Android SDK **15.4.037**
+### 20 September 2021: iOS SDK **15.4.033**, Android SDK **15.4.037**
 
 Version 15.4 of the SDK adds support for Mobile Credential sharing.
 
