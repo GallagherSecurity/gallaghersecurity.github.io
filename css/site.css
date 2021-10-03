@@ -53,6 +53,10 @@ code {
 .btn.btn-outline {
   border: 1px solid #fff;
 }
+.btn.btn-small {
+  padding: 13px 22px;
+  font-size: 13px;
+}
 h2.fat {
   font-weight: 700;
   font-size: 30px;

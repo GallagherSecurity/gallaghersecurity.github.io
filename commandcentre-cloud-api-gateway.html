@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Command Centre Cloud API Gateway</h1>  
+      <img src="https://security.gallagher.com/-/media/Project/Security-Business/Security-Public-Site/Images/logo.png?h=57&w=211&hash=0EA242C252043E031A593CA3DB13D59B"></img>
+      <style type="text/css">
+        #content {
+          padding: 1em;
+        } 
+        #sections3 td {
+          width: 33%;
+          padding-right: 1.3em;
+          vertical-align: top;
+        }
+
+        .region-header {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      </style>
+    </header>
+
+    <div id="content">
+      <h2>Overview</h2>
+      <p>
+        A good place to start is with the API Gateway Technical Information Paper.
+      </p>
+      <p>
+        <a href="https://gallaghersecurity.github.io/r/commandcentre-cloud-api-gateway">Command Centre Cloud API Gateway - Technical Information Paper</a>
+      </p>
+
+      <h3>Using the gateway</h3>
+      <p>
+        As per the technical information paper, the gateway is designed to transparently allow REST API requests without modification.
+      </p>
+      <p>
+        When making requests, you do not need to alter the payload, HTTP headers or client certificates that you use; these should all be the same as if you were connecting directly to the server’s REST API via a local network connection. 
+      </p>
+        After enabling the Gateway for your server and REST API user, you need only to replace the local server's URL with the cloud API Gateway one.</li>      
+      </p>
+      <p>
+        Example Local request:
+        <pre>
+            &lt;client certificate thumbprint e89ef121958c675c736efd3fdcd87ca31d502fde&gt;
+            GET https://<strong>servername.yourcompany.local:8904</strong>/api/cardholders
+            Authorization: GGL-API-KEY F6F0-C8F0-60AF-7501-AFB9-C523-B2D3-1D3E
+        </pre>
+      </p>
+      <p>
+        Equivalent Gateway request:
+        <pre>
+          &lt;client certificate thumbprint e89ef121958c675c736efd3fdcd87ca31d502fde&gt;
+          GET https://<strong>commandcentre-api-au.security.gallagher.cloud</strong>/api/cardholders
+          Authorization: GGL-API-KEY F6F0-C8F0-60AF-7501-AFB9-C523-B2D3-1D3E
+        </pre>
+      </p>
+
+      <h3>Region Details</h3>
+
+      <p>
+        <div class="region-header">Australian Gateway Region:</div>
+        <div>DNS address: <strong>commandcentre-api-au.security.gallagher.cloud</strong></div>
+        <div>IP Addresses: <strong>3.106.1.6</strong> and <strong>3.106.100.112</strong></div>
+      </p>
+
+      <p>
+        <div class="region-header">United States Gateway Region:</div>
+        <div>DNS address: <strong>commandcentre-api-us.security.gallagher.cloud</strong></div>
+        <div>IP Addresses: <strong>44.193.42.111</strong> and <strong>3.209.194.103</strong></div>
+      </p>
+  </body>
+</html>
