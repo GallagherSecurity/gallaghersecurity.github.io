@@ -15,11 +15,11 @@
   </defs>
   <g opacity="0.15" fill="#666" font-style="normal" font-weight="bold"
      xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace"
-     font-size="50" stroke-width="0" > <!-- blur filter not accepted here in IE -->
+     font-size="40" stroke-width="0" > <!-- blur filter not accepted here in IE -->
     <rect mask="url(#hole)" width="180" height="350" filter="url(#svg_2_blur)"/>
-    <text y="100" x="30" filter="url(#svg_2_blur)" >{</text>
-    <text y="150" x="70" filter="url(#svg_2_blur)" >...</text>
-    <text y="200" x="35" filter="url(#svg_2_blur)" >}</text>
+    <text y="130" x="20" filter="url(#svg_2_blur)" >{</text>
+    <text y="160" x="50" filter="url(#svg_2_blur)" >...</text>
+    <text y="190" x="25" filter="url(#svg_2_blur)" >}</text>
   </g>
  </g>
 </svg>
