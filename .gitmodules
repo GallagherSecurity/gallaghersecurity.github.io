@@ -1,5 +1,5 @@
 [submodule "cc-rest-docs"]
-	path = cc-rest-docs
+	path = cc-rest-docs-safe
 	url = https://github.com/GallagherSecurity/cc-rest-docs.git
 # doing this means we can commit back from the submodule's directory
 	update = rebase
