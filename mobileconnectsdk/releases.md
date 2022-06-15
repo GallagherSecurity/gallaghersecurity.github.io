@@ -1,5 +1,11 @@
 # Release History
 
+### 15 June 2022: iOS SDK **15.5.026**, Android SDK **15.5.061**
+
+Version 15.5 of the Mobile Connect SDK is a minor release containing small bugfixes and improved support for Android 12 Bluetooth permissions
+
+<a href="Mobile Connect SDK 15.5 Release Notes.html">View the Mobile Connect SDK 15.5 Release Notes and API changes.</a>
+
 ### 20 September 2021: iOS SDK **15.4.033**, Android SDK **15.4.037**
 
 Version 15.4 of the SDK adds support for Mobile Credential sharing.
