@@ -24,7 +24,7 @@ If your app targets Android SDK 31, then these changes will break the SDK's abil
 SDK 15.4 for Android is aware of Android 12, and will warn you about lack of these permissions using the Sdk State callback.
 Requesting the permissions themselves must be done by your host application, not the SDK. Please see the Android SDK Sample app for examples on how to do this.
 
-[More detailed information regarding these cahnges is available on the Android Developers site](https://developer.android.com/about/versions/12/features/bluetooth-permissions).
+[More detailed information regarding these changes is available on the Android Developers site](https://developer.android.com/about/versions/12/features/bluetooth-permissions).
 
 ## iOS SDK no longer depends on RxSwift 
 
