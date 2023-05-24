@@ -1,5 +1,9 @@
 # Release History
 
+### 25 May 2023: iOS SDK **16.1.045**, Android SDK **16.1.71**
+
+Version 16.1 of the Mobile Connect SDK adds FIDO UAF v1.1 certified authenticators (<a href="https://fidoalliance.org/what-is-fido/">What is FIDO?</a>). This is an invisible change to SDK implementers and users. This update also contains small bugfixes and improved support for Android 13 permissions
+
 ### 15 June 2022: iOS SDK **15.5.026**, Android SDK **15.5.061**
 
 Version 15.5 of the Mobile Connect SDK is a minor release containing small bugfixes and improved support for Android 12 Bluetooth permissions
