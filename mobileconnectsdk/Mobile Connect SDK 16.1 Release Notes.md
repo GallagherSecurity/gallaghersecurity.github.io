@@ -2,7 +2,7 @@
 
 Version 16.1 of the Mobile Connect SDK adds FIDO UAF v1.1 certified authenticators (<a href="https://fidoalliance.org/what-is-fido/">What is FIDO?</a>). This is an invisible change to SDK implementers and users. 
 
-It also updates references an updated Salto SDK, with minor changes to the MobileAccess API Salto methods.
+It also references an updated Salto SDK, with minor changes to the MobileAccess API Salto methods.
 
 There are also small bugfixes and improved support for Android 13 permissions.
 
