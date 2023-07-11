@@ -2,7 +2,9 @@
 
 ### 25 May 2023: iOS SDK **16.1.045**, Android SDK **16.1.71**
 
-Version 16.1 of the Mobile Connect SDK adds FIDO UAF v1.1 certified authenticators (<a href="https://fidoalliance.org/what-is-fido/">What is FIDO?</a>). This is an invisible change to SDK implementers and users. This update also contains small bugfixes and improved support for Android 13 permissions
+Version 16.1 of the Mobile Connect SDK adds FIDO UAF v1.1 certified authenticators (<a href="https://fidoalliance.org/what-is-fido/">What is FIDO?</a>). This is an invisible change to SDK implementers and users. This update also contains small bugfixes and improved support for Android 13 permissions.
+
+Note: There is a breaking change to the manifest due to the updated Salto SDK.
 
 <a href="Mobile Connect SDK 16.1 Release Notes.html">View the Mobile Connect SDK 16.1 Release Notes and API changes.</a>
 
