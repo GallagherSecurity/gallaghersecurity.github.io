@@ -14,7 +14,8 @@ There are also small bugfixes and improved support for Android 13 permissions.
 
 The COARSE and FINE location permissions should be updated as below. This is to remove duplicates in the manifest due to the Salto SDK declaring the same permissions.
 
-``` <!-- Required for Android 6.0 to 10 when using Bluetooth LE -->
+``` 
+<!-- Required for Android 6.0 to 10 when using Bluetooth LE -->
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"
         tools:node="replace" />
     <!-- Required for Android 10 to 12 when using Bluetooth LE -->
