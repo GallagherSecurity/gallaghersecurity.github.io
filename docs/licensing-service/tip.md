@@ -11,7 +11,7 @@ Copyright © Gallagher Group Ltd 2024.  All rights reserved.
 
 Important: If you received this document along with your Command Centre installation media, or via another similar channel then it may be out of date with respect to the functionality/behaviour of the cloud, and of Gallagher Mobile Apps, which are distributed through platform App Stores and may be more recent than your Command Centre installation.
 
-It is recommended you refer to the latest revision of this document, which can be found here: https://gallaghersecurity.github.io/r/cloud-licensing-service
+It is recommended you refer to the latest revision of this document, which can be found here: [https://gallaghersecurity.github.io/r/cloud-licensing-service](https://gallaghersecurity.github.io/r/cloud-licensing-service)
 
 # Background
 Cloud Licensing is both a web-based UI and backend cloud service for managing your site’s licenses and which operators those licenses are allocated for. Cloud Licensing fulfils the following:
@@ -24,7 +24,7 @@ The API Gateway is an additional service, which has different characteristics fr
 
 This document specifically discusses Cloud Licensing and does not cover these other cloud services. Please refer to the following document for technical, security and privacy information regarding Gallagher's other cloud services:
 
-https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html
+[https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html](https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html)
 
  
 # Architecture
@@ -66,7 +66,7 @@ All data transfer between the Command Centre server and Cloud Licensing Service 
 
 We support only TLS 1.2 and TLS 1.3; older protocols are disallowed which mitigates most encryption-related security risks. 
 
-Refer to the Gallagher API TIP for more information on this https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html. 
+Refer to the Gallagher API TIP for more information on this [https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html](https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html). 
 
 ## Data Visibility
 It is important to note that the Gateway has visibility into REST API requests that transit through it. This is inherent to the nature of any reverse proxy/gateway solution; for example, if you configured an Azure Application Gateway, then Microsoft would have visibility of any traffic that was sent via that gateway as well.
@@ -74,7 +74,7 @@ REST API requests may contain any of the following:
 * Cardholder names, description, divisions.
 
 Gallagher policy is to never inspect, modify, save, log, or extract any sensitive or request-specific data such as the above.
-Refer to the Gallagher API TIP for more information on this https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html
+Refer to the Gallagher API TIP for more information on this [https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html](https://gallaghersecurity.github.io/commandcentre-cloud-api-gateway.html)
 
 # Email
 Site administrators may opt-in to receive emails from Gallagher about when subscription status, such as notifications when their cloud licenses are expiring, expired, or deactivated. Gallagher will not use this email address to send marketing or other types of emails.
