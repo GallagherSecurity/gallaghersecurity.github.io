@@ -45,11 +45,11 @@ Cloud Licensing Portal and Service are hosted in Australia.
 ## Network Configuration Details
 The Cloud Licensing Portal communicates using REST to the Cloud Licensing Service.
 
-<u>**Cloud Licensing Portal:**</u>
+**<u>Cloud Licensing Portal:</u>**
 
 DNS Address: **commandcentre-licensing-portal.security.gallagher.cloud**
 
-<u>**Cloud Licensing Service:**</u>
+**<u>Cloud Licensing Service:</u>**
 
 DNS Address: **services.security.gallagher.cloud**
 
