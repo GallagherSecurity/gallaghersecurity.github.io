@@ -85,7 +85,7 @@ Refer to the Gallagher API TIP for more information on this [https://gallagherse
 ## Email
 Site administrators may opt-in to receive emails from Gallagher about when subscription status, such as notifications when their cloud licenses are expiring, expired, or deactivated. Gallagher will not use this email address to send marketing or other types of emails.
 
-Emails will be sent from: **licensing@security.gallagher.io**
+Emails will be sent from: **licensing@security.gallagher.cloud**
 
 ## Security Controls
 ### Cloud Services
