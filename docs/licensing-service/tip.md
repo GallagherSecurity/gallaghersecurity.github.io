@@ -1,3 +1,7 @@
+---
+title: Cloud Licensing Service TIP Document
+---
+
 # Cloud Licensing Service TIP Document
 
 ## Disclaimer
