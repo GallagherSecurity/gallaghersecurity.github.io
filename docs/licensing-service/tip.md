@@ -23,7 +23,7 @@ It is recommended you refer to the latest revision of this document, which can b
 Cloud Licensing is both a web-based UI and backend cloud service for managing your site’s licenses and which operators those licenses are allocated for. Cloud Licensing fulfils the following:
 * Allocate or revoke operator licenses.
 * Check the existing cloud licenses for your site.
-* Start trials for cloud-based solutions
+* Start trials for cloud-based solutions.
 
 ### Reference: Other Gallagher Cloud Services
 The API Gateway is an additional service, which has different characteristics from Gallagher's other cloud services (such as used for Mobile Credential enrolment). 
