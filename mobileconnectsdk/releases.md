@@ -4,6 +4,15 @@ title: Gallagher Mobile Connect SDK
 
 # Release History
 
+### 2 July 2024: iOS SDK **16.4.100**, Android SDK **16.4.053**
+
+Version 16.4 of the Mobile Connect SDK introduces support for two new features: transmitting Salto audit events for offline readers and enabling access with Aperio BLE readers. 
+Both features require Command Centre server version 9.00 or higher.
+
+The SDK update also contains small bugfixes and BLE improvements.
+
+<a href="Mobile Connect SDK 16.4 Release Notes.html">View the Mobile Connect SDK 16.4 Release Notes.</a>
+
 ### 25 May 2023: iOS SDK **16.1.045**, Android SDK **16.1.71**
 
 Version 16.1 of the Mobile Connect SDK adds FIDO UAF v1.1 certified authenticators (<a href="https://fidoalliance.org/what-is-fido/">What is FIDO?</a>). This is an invisible change to SDK implementers and users. This update also contains small bugfixes and improved support for Android 13 permissions.
