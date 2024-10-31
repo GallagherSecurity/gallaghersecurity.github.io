@@ -4,6 +4,16 @@ title: Gallagher Mobile Connect SDK
 
 # Release History
 
+### X November 2024: iOS SDK **17.0.XXX**, Android SDK **17.0.XXX**
+
+Version 17.0 of the Mobile Connect SDK introduces support for a new feature: Provisioning of Wallet passes for iOS. The feature requires Command Centre server version 9.10 or higher.
+
+The SDK update also contains Android 14 support, small bugfixes and BLE improvements.
+
+<a href="Mobile Connect SDK 17.0 Release Notes.html">View the Mobile Connect SDK 17.0 Release Notes.</a>
+
+# Release History
+
 ### 2 July 2024: iOS SDK **16.4.100**, Android SDK **16.4.053**
 
 Version 16.4 of the Mobile Connect SDK introduces support for two new features: transmitting Salto audit events for offline readers and enabling access with Aperio BLE readers. 
