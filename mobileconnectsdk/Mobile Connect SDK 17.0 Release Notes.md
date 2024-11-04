@@ -7,7 +7,7 @@ The following are the specific changes for each platform:
 ## iOS SDK Changes
 
 * The SDK added `Wallet` feature support, allowing the user to provision Apple Wallet passes for registered credentials.
-* The Wallet feature (Apple Employee Badge) is a licensed feature that requires Command Centre server version 9.10 or higher.
+* The Wallet feature (Apple Employee Badge) is a licensed feature that requires Command Centre server version 9.10 MR3 or higher.
 
 ## Android SDK Changes
 
