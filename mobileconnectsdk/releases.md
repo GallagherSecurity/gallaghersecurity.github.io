@@ -4,6 +4,12 @@ title: Gallagher Mobile Connect SDK
 
 # Release History
 
+### 6 March 2025: iOS SDK **17.0.050**, Android SDK **17.01.026**
+
+Version 17.1 of the Mobile Connect SDK contains bug fixes and minor enhancements.
+
+There is now a per-reader backoff timer rather than a global backoff. 
+
 ### 4 November 2024: iOS SDK **17.0.014**, Android SDK **17.0.027**
 
 Version 17.0 of the Mobile Connect SDK introduces support for a new feature: Provisioning of Wallet passes for iOS. The feature requires Command Centre server version 9.10 MR3 or higher.
