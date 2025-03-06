@@ -7,3 +7,5 @@ Version 17.1 of the Mobile Connect SDK contains minor enhancements and bugfixes.
 
 * Refactored the Bluetooth Connection Manager to improve stability
 
+* canAddToWallet helper function added to the Wallet class. This will return an AddToWalletDisplayStatus which indicates the Wallet status of a Credential's devices
+
