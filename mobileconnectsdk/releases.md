@@ -4,7 +4,7 @@ title: Gallagher Mobile Connect SDK
 
 # Release History
 
-### X August 2025: iOS SDK **17.2.302**, Android SDK **17.2.303**
+### 7 August 2025: iOS SDK **17.2.302**, Android SDK **17.2.303**
 
 Version 17.2 of the Mobile Connect SDK contains iOS Wallet documentation updates, Android 15 support, internal RxJava isolation, biometric improvements, and minor bug fixes.
 
