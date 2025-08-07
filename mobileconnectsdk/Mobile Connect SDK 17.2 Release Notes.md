@@ -8,7 +8,7 @@ This release includes documentation enhancements, minor bug fixes, and platform-
     * Clarified the process for requesting the Wallet app entitlement.
     * Included recommendations and considerations for displaying and hiding the "Add to Apple Wallet" button.
 * Introduced a new helper function `addToWalletStatus` in the `Wallet` class, replacing the now-deprecated `canAddToWallet`.
-* Calling `startProvisioningWallet` is now blocked if a pass provisioning process is already underway. This prevents initiating new requests while Apple completes the existing provisioning asynchronously. This is Indicated by the new enum case: `WalletProvisioningError.provisioningInProgress`.
+* Calling `startProvisioningWallet` is now blocked if a pass provisioning process is already underway. This prevents initiating new requests while Apple completes the existing provisioning asynchronously. This is indicated by the new enum case: `WalletProvisioningError.provisioningInProgress`.
 
 
 ## Android SDK Changes
